@@ -1,7 +1,7 @@
 import sourceMapSupport from 'source-map-support'
 import {spawn} from 'child_process'
 import {db} from './configs/index.js'
-import createApp from '.'
+import createApp from './index.js'
 import executeScheduledTasks from './tasks'
 import {getInterfaceIp} from './utils/helpers'
 
