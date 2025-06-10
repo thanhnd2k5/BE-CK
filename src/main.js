@@ -1,14 +1,14 @@
 import sourceMapSupport from 'source-map-support'
 import {spawn} from 'child_process'
-import {db} from './configs/index.js'
-import createApp from './index.js'
-import executeScheduledTasks from './tasks/index.js'
-import {getInterfaceIp} from './utils/helpers/index.js'
+import {db} from './configs'
+import createApp from '.'
+import executeScheduledTasks from './tasks'
+import {getInterfaceIp} from './utils/helpers'
 
 // enable source maps
 sourceMapSupport.install()
 
-const host = process.env.HOST || '0.0.0.0'
+const host = process.env.HOST || 'localhost'
 const port = parseInt(process.env.PORT, 10) || 3456
 
 const app = createApp()
